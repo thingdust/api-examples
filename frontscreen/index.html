@@ -2,8 +2,29 @@
 <html>
     <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>Frontscreen</title>
         <script src="script.js" type="text/javascript"></script>
+        <style>
+            svg {
+                font-size: 1.5px;
+            }
+            /* ubuntu-regular - latin */
+            @font-face {
+                font-family: 'Ubuntu';
+                font-style: normal;
+                font-weight: 400;
+                src: url('../fonts/ubuntu-v15-latin-regular.eot'); /* IE9 Compat Modes */
+                src: local(''), url('../fonts/ubuntu-v15-latin-regular.eot?#iefix') format('embedded-opentype'),
+                    /* IE6-IE8 */ url('../fonts/ubuntu-v15-latin-regular.woff2') format('woff2'),
+                    /* Super Modern Browsers */ url('../fonts/ubuntu-v15-latin-regular.woff') format('woff'),
+                    /* Modern Browsers */ url('../fonts/ubuntu-v15-latin-regular.ttf') format('truetype'),
+                    /* Safari, Android, iOS */ url('../fonts/ubuntu-v15-latin-regular.svg#Ubuntu') format('svg'); /* Legacy iOS */
+            }
+            body {
+                font-family: 'Ubuntu';
+            }
+        </style>
     </head>
     <body>
         <div>
@@ -12,7 +33,7 @@
         </div>
         <div>
             Average Temperature:
-            <span id="average_temperature"></span>°C
+            <span id="average_temperature"></span> °C
         </div>
         <style id="map_style"></style>
 
@@ -24,7 +45,6 @@
             y="0px"
             viewBox="0 0 192.4 77.6"
             style="enable-background: new 0 0 192.4 77.6"
-            xml:space="preserve"
             class="id_51b78dc4_Ebene_1"
         >
             <style type="text/css">
