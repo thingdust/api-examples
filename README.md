@@ -10,13 +10,11 @@ Live: [https://thingdust.github.io/api-examples/frontscreen](https://thingdust.g
 
 # ReST
 
-Information       | v1 | v2 | v3
------------------ | -- | -- | --
-occupied status   | x  | x  | x
-unoccupied status | x  | x  | x
-warm status       |    |    | x 
-humidity          |    | x  | x 
-temperature       |    | x  | x
+Information       | v1 | v3
+----------------- | -- | --
+occupied status   | x  | x
+unoccupied status | x  | x
+warm status       |    | x 
 
 ```
 $ curl --header "X-API-KEY: UEKNEYKACORWF9JMYBGLPOCPIBHNJUHYIAADBRQCEHQM2V7YJUSCVBFUNOWW" https://demo.cust.prod.thingdust.io/api/v1/get_space_states
@@ -28,43 +26,22 @@ $ curl --header "X-API-KEY: UEKNEYKACORWF9JMYBGLPOCPIBHNJUHYIAADBRQCEHQM2V7YJUSC
 ```
 
 ```
-$ curl --header "X-API-KEY: UEKNEYKACORWF9JMYBGLPOCPIBHNJUHYIAADBRQCEHQM2V7YJUSCVBFUNOWW" https://demo.cust.prod.thingdust.io/api/v2/get_space_states
-{
-  "Alcove 1.1": {
-    "humidity": 53.333333333333336,
-    "occupancy": "unoccupied",
-    "temperature": 23.8
-  },
-    "Alcove 1.2": {
-    "humidity": 54.666666666666664,
-    "occupancy": "occupied",
-    "temperature": 24.4
-  },
-    "Alcove 2.1": {
-    "humidity": 49.333333333333336,
-    "occupancy": "unoccupied",
-    "temperature": 24.8
-  }
-}
-```
-
-```
 $ curl --header "X-API-KEY: UEKNEYKACORWF9JMYBGLPOCPIBHNJUHYIAADBRQCEHQM2V7YJUSCVBFUNOWW" https://demo.cust.prod.thingdust.io/api/v3/get_space_states
 {
   "Alcove 1.1": {
-    "humidity": 53.333333333333336,
+    "humidity": -1,
     "occupancy": "warm",
-    "temperature": 23.8
+    "temperature": -1
   },
   "Alcove 1.2": {
-    "humidity": 54.666666666666664,
+    "humidity": -1,
     "occupancy": "occupied",
-    "temperature": 24.4
+    "temperature": -1
   },
   "Alcove 2.1": {
-    "humidity": 49.333333333333336,
+    "humidity": -1,
     "occupancy": "unoccupied",
-    "temperature": 24.8
+    "temperature": -1 
   }
 }
 ```

@@ -8,11 +8,8 @@ function normalize_name(space_name) {
 function on_state_update(state) {
     const spaces = Object.entries(state);
     const free_spaces = spaces.filter(([_, space]) => space.occupancy === 'unoccupied').length;
-    const average_temperature =
-        spaces.map(([_, space]) => space.temperature).reduce((sum, value) => sum + value) / spaces.length;
 
     document.getElementById('free_spaces').innerText = `${free_spaces}`;
-    document.getElementById('average_temperature').innerText = `${average_temperature.toFixed(2)}`;
     document.getElementById('map_style').innerText = spaces
         .map(([name, space]) => {
             const class_name = `___SPACE___Space_${normalize_name(name)}`;
